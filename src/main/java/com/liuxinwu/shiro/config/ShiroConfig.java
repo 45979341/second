@@ -16,8 +16,6 @@ import org.apache.shiro.mgt.SecurityManager;
 
 /**
  * Shiro配置类
- * @author linhongcun
- *
  */
 @Configuration
 public class ShiroConfig {
