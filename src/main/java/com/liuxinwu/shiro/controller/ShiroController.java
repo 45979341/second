@@ -2,7 +2,6 @@ package com.liuxinwu.shiro.controller;
 
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.apache.shiro.subject.Subject;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,6 +26,10 @@ public class ShiroController {
         // 执行认证登陆
         try {
             subject.login(token);
+
+            //我測試使用
+            Object obj = subject.getPrincipal();//為啥這個就是username。。。。。
+            System.out.println("obj");
         } catch (UnknownAccountException uae) {
             return "未知账户";
         } catch (IncorrectCredentialsException ice) {
