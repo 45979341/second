@@ -15,9 +15,9 @@ import org.springframework.context.annotation.DependsOn;
 import org.apache.shiro.mgt.SecurityManager;
 
 /**
- * Shiro配置类
- * @author linhongcun
  *
+ *
+ * Shiro配置类
  */
 @Configuration
 public class ShiroConfig {
