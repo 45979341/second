@@ -64,6 +64,7 @@ public class ShiroConfig {
         //都是全路径
         filterChainDefinitionMap.put("/webjars/**", "anon");
         filterChainDefinitionMap.put("/shiro/login", "anon");
+        filterChainDefinitionMap.put("/shiro/log/login2", "anon");
         filterChainDefinitionMap.put("/", "anon");
         filterChainDefinitionMap.put("/front/**", "anon");
         filterChainDefinitionMap.put("/api/**", "anon");

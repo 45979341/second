@@ -1,5 +1,6 @@
 package com.liuxinwu.shiro.controller;
 
+import com.liuxinwu.shiro.annotations.AccessRequired;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.subject.Subject;
@@ -15,6 +16,12 @@ public class ShiroController {
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String defaultLogin() {
         return "首页";
+    }
+
+    @AccessRequired
+    @RequestMapping(value = "/log/login2", method = RequestMethod.GET)
+    public String defaultLogin2() {
+        return "首页2";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
